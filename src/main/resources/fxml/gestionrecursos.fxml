@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.springavanzadoalvaror.ui.pantallas.GestionRecursosController">
+
+
+    <Label layoutX="250.0" layoutY="20.0" text="Recursos">
+        <font>
+            <Font size="22.0"/>
+        </font>
+    </Label>
+
+    <TableView fx:id="recursosTable" layoutX="30.0" layoutY="100.0" prefHeight="200.0" prefWidth="240"
+               style="-fx-alignment: center">
+        <columns>
+            <TableColumn fx:id="recursoColumn" prefWidth="120" style="-fx-alignment: center" text="Rescurso"/>
+            <TableColumn fx:id="recursoPasswordColumn" prefWidth="120" style="-fx-alignment: center" text="Password"/>
+        </columns>
+    </TableView>
+
+    <TableView fx:id="compartidosTable" layoutX="300.0" layoutY="100.0" prefHeight="200.0" prefWidth="121"
+               style="-fx-alignment: center">
+        <columns>
+            <TableColumn fx:id="compartidosColumn" prefWidth="120" style="-fx-alignment: center" text="Compartidos"/>
+        </columns>
+    </TableView>
+
+    <ComboBox fx:id="compartirRecurso" layoutX="300.0" layoutY="315.0" prefWidth="80.0" promptText="Nuevo"/>
+    <Button layoutX="300.0" layoutY="350.0" mnemonicParsing="false" prefWidth="80.0" text="Compartir" onAction="#compartir"/>
+
+    <TextField fx:id="nombreRecurso" layoutX="470.0" layoutY="120.0" prefWidth="85.0" promptText="Nombre"/>
+    <TextField fx:id="passwordRecurso" layoutX="470.0" layoutY="160.0" prefWidth="85.0" promptText="Password"/>
+    <Button layoutX="470.0" layoutY="200.0" mnemonicParsing="false" text="Crear recurso" onAction="#crearRecurso"/>
+
+    <TextField fx:id="newPassword" layoutX="30.0" layoutY="315.0" prefWidth="125.0" promptText="New Password"/>
+    <Button layoutX="30.0" layoutY="350.0" mnemonicParsing="false" prefWidth="125.0" text="Cambiar Contraseña"
+            onAction="#changePassword"/>
+    <Button layoutX="470.0" layoutY="270.0" mnemonicParsing="false" prefWidth="85.0" text="Check Firma" onAction="#checkFirma"/>
+</AnchorPane>
